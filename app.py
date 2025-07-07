@@ -23,10 +23,10 @@ if not row.empty:
     # Check of profession en specialization strings zijn voordat we lower() aanroepen
     prof_str = profession.lower() if isinstance(profession, str) else str(profession)
     spec_str = specialization.lower() if isinstance(specialization, str) else str(specialization)
-    st.write(f"Gemiddeld uurtarief voor {prof_str} ({spec_str}): €{gemiddelde}")
+    st.write(f"Gemiddeld uurtarief voor {prof_str} ({spec_str}): €{gemiddelde} (excl. BTW)")
     
     # Voer eigen uurtarief in
-    uurtarief = st.number_input("Wat is jouw uurtarief? (€)", min_value=0.0, step=1.0)
+    uurtarief = st.number_input("Wat is jouw uurtarief? (€, ex BTW)", min_value=0.0, step=1.0)
     
     # Vergelijking
     if uurtarief > 0:
